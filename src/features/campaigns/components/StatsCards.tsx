@@ -33,19 +33,19 @@ export function StatsCards() {
         },
         {
             title: 'Activas',
-            value: stats?.by_status?.ACTIVE || 0,
+            value: stats?.by_status?.ACTIVE ?? 0,
             icon: <FiCheckCircle style={{ color: colors.success }} />,
             valueStyle: { color: colors.success },
         },
         {
             title: 'Procesando',
-            value: stats?.by_status?.PROCESSING || 0,
+            value: stats?.by_status?.PROCESSING ?? 0,
             icon: <FiLoader style={{ color: colors.warning }} className="animate-spin" />,
             valueStyle: { color: colors.warning },
         },
         {
             title: 'Fallidas',
-            value: stats?.by_status?.FAILED || 0,
+            value: stats?.by_status?.FAILED ?? 0,
             icon: <FiXCircle style={{ color: colors.error }} />,
             valueStyle: { color: colors.error },
         },
