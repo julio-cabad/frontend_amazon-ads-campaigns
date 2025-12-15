@@ -6,7 +6,9 @@ import { message as antdMessage } from 'antd';
 // AXIOS INSTANCE CONFIGURATION
 // ============================================
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+const API_BASE_URL = import.meta.env.PROD
+    ? 'https://backendamazon-ads-campaigns-production.up.railway.app/api'
+    : (import.meta.env.VITE_API_URL || '/api');
 
 export const apiClient = axios.create({
     baseURL: API_BASE_URL,
